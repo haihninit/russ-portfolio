@@ -1,0 +1,448 @@
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable comment-whitespace-inside */
+/* style.production.css*/
+
+/* Color Variables */
+:root {
+  --primary-color: #112055;
+  --secondary-color: #4f9d92;
+  --background-color: #bad9dc;
+  --button-bg-color: #122fed;
+  --button-hover-bg-color: #ff1e00;
+}
+
+/* Font Variables */
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --font-size-default: 16px;
+  --font-size-large: 20px;
+  --font-size-xlarge: 24px;
+  --font-weight-bold: 600;
+}
+
+/* Spacing Variables */
+:root {
+  --padding-default: 20px;
+  --padding-small: 10px;
+  --margin-default: 20px;
+  --margin-small: 10px;
+  --grid-gap: 10px;
+}
+
+/* Border Variables */
+:root {
+  --border-width: 3px;
+  --border-color: #000;
+  --border-radius: 5px;
+}
+
+/* Box Shadow Variables */
+:root {
+  --box-shadow: 4px 3px 19px 0 rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: var(--padding-default);
+  background-color: var(--background-color);
+}
+
+* {
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+#codecheckout {
+  position: static;
+  text-decoration: none;
+  color: #000;
+  font-size: var(--font-size-xlarge);
+  padding: var(--padding-small) var(--padding-default);
+  border: var(--border-width) solid;
+  cursor: grab;
+  display: inline;
+  transition: 0.2s ease all;
+}
+
+table {
+  width: 100px;
+  border-collapse: collapse;
+  margin-top: var(--margin-default);
+  float: left;
+  margin-left: var(--margin-small);
+}
+
+th,
+td {
+  border: var(--border-width) solid var(--border-color);
+  padding: var(--padding-small);
+}
+
+img {
+  margin-right: var(--margin-small);
+  color: #000;
+  font-weight: var(--font-weight-bold);
+  width: 130px;
+  margin-bottom: var(--margin-default);
+  margin-left: var(--margin-small);
+}
+
+.Profile {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  display: flex;
+  float: left;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+nav ul {
+  list-style: none;
+  gap: var(--margin-small);
+  display: inline-flex;
+  justify-content: left;
+  margin-top: var(--margin-default);
+  font-size: var(--font-size-large);
+  margin-bottom: var(--margin-default);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: var(--padding-small);
+  font-size: var(--font-size-large);
+  display: inline-flex;
+  justify-content: left;
+  margin-bottom: var(--margin-default);
+}
+
+nav ul li a:hover {
+  background-color: #fefcfc;
+}
+
+h1 {
+  margin-top: var(--margin-default);
+  font-size: var(--font-size-xlarge);
+  text-align: center;
+}
+
+form {
+  margin-top: var(--margin-default);
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  font-weight: var(--font-weight-bold);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="message"],
+textarea {
+  width: 200px;
+  padding: var(--padding-small);
+  border: 1px solid #000;
+  border-radius: var(--border-radius);
+}
+
+.button {
+  background-color: var(--button-bg-color);
+  color: #fff;
+  padding: var(--padding-small) var(--padding-default);
+  border: 22px;
+  cursor: grab;
+  display: block;
+  justify-content: center;
+  margin: auto;
+  margin-top: var(--margin-default);
+  text-align: center;
+  font-size: var(--font-size-large);
+  transition: 0.3s ease all;
+}
+
+.button,
+button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* takes the font from the outer container */
+  font-family: inherit;
+
+  /* styles the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: var(--padding-small);
+  border-radius: var(--border-radius);
+
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: #fff;
+  padding: var(--padding-small) var(--padding-default);
+  border: none;
+  cursor: crosshair;
+  justify-content: center;
+  margin-bottom: var(--margin-small);
+}
+
+input[type="submit"]:hover {
+  background-color: var(--button-hover-bg-color);
+  color: #fff;
+  padding: var(--padding-small) var(--padding-default);
+  border: none;
+  cursor: crosshair;
+  justify-content: center;
+  margin-bottom: var(--margin-small);
+}
+
+input[type="submit"]:active {
+  background-color: #e5ff00;
+  color: #fff;
+  padding: var(--padding-small) var(--padding-default);
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  margin-bottom: var(--margin-small);
+}
+
+p {
+  font-size: var(--font-size-large);
+  color: #000;
+  text-align: center;
+}
+
+nav {
+  padding: var(--padding-small);
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  padding: var(--padding-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--margin-default);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--grid-gap);
+  border: var(--border-width);
+  text-align: center;
+}
+
+.grid-item {
+  padding: var(--padding-default);
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--grid-gap);
+  text-align: center;
+  align-items: center;
+  background-color: #f9e3c1;
+  color: black;
+  font-size: var(--font-size-large);
+  margin: var(--margin-default);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+footer img {
+  display: flex;
+  margin: 0 var(--margin-small);
+  text-align: center;
+  width: 50px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+path {
+  display: flex;
+  width: 50%;
+  height: auto;
+}
+
+.about-picture {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.about-picture img {
+  display: flex;
+  width: 50%;
+  height: auto;
+  margin: var(--margin-default) auto;
+}
+
+/* ANIMATIONS */
+svg * {
+  transform-box: fill-box;
+  display: flex;
+  width: 50%;
+  height: auto;
+  margin: var(--margin-default) auto;
+  justify-content: right;
+}
+
+.svg-box {
+  display: flex;
+  justify-content: right;
+  width: 50%;
+  height: auto;
+
+  /* Adjust the height value as needed */
+}
+
+.svg-box svg {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.sun {
+  animation-name: color-change;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.sun:hover {
+  animation-play-state: paused;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #fff;
+  }
+
+  50% {
+    fill: #f5fa7b;
+  }
+
+  100% {
+    fill: #fbff00;
+  }
+}
+
+.cloud-front {
+  animation-name: cloud-move;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translate(0, 50px);
+  }
+
+  100% {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-back {
+  animation: cloud-move-reverse 5s ease-in-out infinite alternate both;
+}
+
+@keyframes cloud-move-reverse {
+  0% {
+    transform: translate(446px, 50px);
+  }
+
+  100% {
+    transform: translate(300px, 50px);
+  }
+}
+
+/* Adds the @media query for smaller screen sizes */
+@media (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    /* 1-column layout for smaller screens */
+    grid-gap: var(--margin-default);
+  }
+}
+
+/* 2-column layout for medium-sized screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* 2-column layout for medium-sized screens */
+    grid-gap: var(--margin-default);
+  }
+}
+
+/* 4-column layout for larger screens */
+@media (min-width: 1025px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* 4-column layout for larger screens */
+    grid-gap: var(--margin-default);
+  }
+}
+
+@media only screen and (max-width: 828px) {
+  body {
+    padding: var(--padding-small);
+  }
+}
+
+/* Additional CSS styles */
+h1 {
+  font-size: var(--font-size-large);
+}
+
+.grid-item:last-child {
+  grid-column: auto / auto;
+  grid-row: auto / auto;
+}
+
+h1 {
+  font-size: var(--font-size-xlarge);
+}
