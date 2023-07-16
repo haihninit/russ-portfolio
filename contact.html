@@ -59,15 +59,15 @@
     <form action="submit" method="post">
       <div class="form-row"></div>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required minlength="4" maxlength="8" alt="name" />
+      <input type="text" id="name" name="name" required minlength="4" maxlength="8" />
       <br />
       <div class="form-row"></div>
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required alt="email" />
+      <input type="email" id="email" name="email" required />
       <br />
       <div class="form-row"></div>
       <label for="telephone">Telephone:</label>
-      <input type="tel" id="telephone" name="telephone" required alt="telephone" />
+      <input type="tel" id="telephone" name="telephone" required />
       <div class="form-row"></div>
       <label for="message">Message:</label>
       <textarea
@@ -76,18 +76,10 @@
         required
         minlength="10"
         maxlength="20"
-        alt="message"
         placeholder=" Write something here…"
       ></textarea>
       <br />
-      <input
-        class="button"
-        type="submit"
-        value="Send Message"
-        onclick="AnimationEffect"
-        alt="send message button"
-        id="submit"
-      />
+      <input class="button" type="submit" value="Send Message" onclick="AnimationEffect" id="submit" />
     </form>
   </div>
   <footer>
